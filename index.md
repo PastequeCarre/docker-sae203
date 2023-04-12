@@ -28,3 +28,9 @@ Nous allons installer alpine et httpd.
 
 > `docker pull alpine`
 > `docker pull httpd`
+
+## 3. Interactions avec les conteneurs docker
+
+La première image *(alpine)* est une version allégée de linux et la deuxième *(httpd)* est une image linux avec un serveur apache déjà configuré et prêt à être utilisé .
+Si l’image est installée et sur notre machine, la commande `docker run <image>` créera un conteneur à partir de celle-ci. 
+
