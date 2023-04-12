@@ -103,7 +103,8 @@ Puis on lance la commande `docker cp <nom du fichier>.html <ID>:/usr/local/apach
 Dans cette section, nous allons créer des volumes entre les deux machines en utilisant l’image httpd.
 Tout d’abord on crée un répertoire html ou on voit, Nous l'avons créé sur le bureau. Dans ce répértoire, on crée un fichier index.html avec le contenu de notre choix.
 
-Sur le dossier html, on ouvre un cmd et on exécute l’instruction suivante `docker run --name httpd-<votre nom> -d -p <port hôte>:80 -v $(pwd):/usr/local/apache2/htdocs httpd`
+Sur le dossier html, on ouvre un cmd et on exécute l’instruction suivante :
+`docker run --name httpd-<votre nom> -d -p <port hôte>:80 -v $(pwd):/usr/local/apache2/htdocs httpd`
 
 Donc pour nous ca sera `docker run --name httpd-Marrouche -d -p 9000:80 -v C:\Users\rambo\Desktop\html\:/usr/local/apache2/htdocs httpd`
 Maintenant on  peut modifier notre fichier depuis notre bureau et le site web changera automatiquement. On a en effet un dossier partagé avec le conteneur.
