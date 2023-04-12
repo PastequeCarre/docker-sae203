@@ -5,7 +5,7 @@
 
 [I. Fonctionnement de base de Docker](https://pastequecarre.github.io/docker-sae203/#1) 
     
-[I. Dockerfile pour la création d'images](https://pastequecarre.github.io/docker-sae203/#2)
+[II. Dockerfile pour la création d'images](https://pastequecarre.github.io/docker-sae203/#2)
     
 
 --------------
@@ -118,4 +118,41 @@ Maintenant on  peut modifier notre fichier depuis notre bureau et le site web ch
 --------------
 <a id="2"></a>
 # II. Dockerfile pour la création d'images
+
+## 1. Introduction à Dockerfile
+
+### 1.1. Notre premier dockerfile
+
+Un dockerfile est ce qui est utilisé pour construire une image. Il contient des instructions qui précisent ce qui va aller dans l’environnement.
+Un fichier Dockerfile indique comment et avec quoi construire l’image.
+
+#### 1.1.1. Structure de répertoires
+
+On va créer un premier répertoire premierDockerfile et créer un fichier “Dockerfile” dedans. On copie le code du dockerfile donné. 
+Dans le code, on indique l’image parent, qu’on va copier le répertoire html vers le répertoire de l’image `/usr/…/htdocs/`.
+Nous allons donc créer un répertoire html dans le répertoire premierDockerfile et créer un fichier index.html dans html. Le tree doit afficher :
+
+**IMAGE**
+
+#### 1.1.2. Créer l’image et lancer le conteneur
+
+Pour construire l’image décrite dans le dockerfile, on utilise `docker build -t <nom de l’image>`.  
+
+   - “docker build” nous permet d’indiquer que nous allons construire une nouvelle image
+   - “-t” permet de choisir le nom de l’image
+   - “.” indique le répertoire courant
+
+**IMAGE**
+
+On lance ensuite notre serveur web : `docker run –name <nom de conteneur de notre choix> -d -p 9000:80 <nom de l’image>`
+
+**IMAGE**
+
+On vérifie que l’application est en cours d’exécution, on ouvre un navigateur et on tape `localhost:9000` et normalement, notre site doit s’afficher.
+
+   - On peut arrêter le conteneur avec : `docker stop <nom du conteneur>`
+   - On peut supprimer le conteneur avec : `docker rm <nom du conteneur>`
+
+
+
 
