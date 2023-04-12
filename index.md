@@ -1,6 +1,7 @@
 # Compte rendu - SAE 2.03
 ## Groupe 2
 
+--------------
 # I. Fonctionnement de base de Docker
 
 ## 2. Premières notions de Docker
@@ -12,7 +13,7 @@ Normalement on obtient : `Docker version 20.10.24, build 297e128`
 Ensuite nous lançons notre premier conteneur en utilisant
 l’image hello-world : `docker run hello-world` qui doit montrer ce message :
 
---------------
+IMAGE
 
 
 ### 2.1. Image Docker vs Conteneur Docker
@@ -27,6 +28,7 @@ Les images les plus populaires se trouvent sur https://hub.docker.com/explore/
 Nous allons installer alpine et httpd.
 
 > `docker pull alpine`
+>  
 > `docker pull httpd`
 
 ## 3. Interactions avec les conteneurs docker
