@@ -24,7 +24,7 @@ Un conteneur Docker est une image exécutable.
 
 ### 2.2. Images les plus populaires
 
-Les images les plus populaires se trouvent sur [https://hub.docker.com/explore/]
+Les images les plus populaires se trouvent sur <https://hub.docker.com/explore/>
 Nous allons installer alpine et httpd grâce à `docker pull alpine` et `docker pull httpd`.
 
 ## 3. Interactions avec les conteneurs docker
