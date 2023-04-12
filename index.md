@@ -13,7 +13,7 @@ Normalement on obtient : `Docker version 20.10.24, build 297e128`
 Ensuite nous lançons notre premier conteneur en utilisant
 l’image hello-world : `docker run hello-world` qui doit montrer ce message :
 
-IMAGE
+**IMAGE**
 
 
 ### 2.1. Image Docker vs Conteneur Docker
@@ -34,3 +34,18 @@ Nous allons installer alpine et httpd grâce à `docker pull alpine` et `docker 
 La première image *(alpine)* est une version allégée de linux et la deuxième *(httpd)* est une image linux avec un serveur apache déjà configuré et prêt à être utilisé .
 Si l’image est installée et sur notre machine, la commande `docker run <image>` créera un conteneur à partir de celle-ci. 
 
+
+### 3.1 Conteneur en mode interactif
+
+Tout d'abord, on entre `docker run alpine`
+
+Une image a une action à exécuter par défaut. Dans le cas d’alpine c”est `/bin/sh` qui n'affiche rien. On peut passer un nouveau paramètre dans l’appel aussi.
+`docker run alpine ls`
+
+Pour rendre le conteneur interactif, il faut lui passer l’option -it: `docker run -it alpine`
+
+Maintenant on navigue à l’intérieur du conteneur. On peut le vérifier avec `cat /etc/os-release`
+
+Qui doit donner : 
+
+**IMAGE**
