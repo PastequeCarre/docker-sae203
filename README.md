@@ -8,7 +8,7 @@
 
 1. Construire l'image via le Dockerfile (commande à exécuter dans le dossier où se trouve le dit Dockerfile)
 
-       docker build -t <nom image>
+       docker build -t <nom image> .
 
 2. Créer un conteneur docker avec l'image créée plus tôt
 
