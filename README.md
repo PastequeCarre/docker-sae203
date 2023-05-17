@@ -17,3 +17,19 @@
 3. Accéder au site en entrant dans la barre d'adresse :
 
        localhost:<port>
+
+
+## Comment installer le site avec notre docker-compose?
+
+1. Construire l'image via le docker-compose.yaml (commande à exécuter dans le dossier où se trouve le dit docker-compose.yaml)
+
+       docker-compose up 
+ 
+2.Accéder au site en entrant dans la barre d'adresse :
+
+       localhost:9000
+  
+3.Accéder à PHPMyAdmin en entrant dans la barre d'adresse :
+
+       localhost:8080
+       
