@@ -20,4 +20,4 @@ COPY ./data /data
 EXPOSE 3306
 EXPOSE 80
 
-CMD bash -c "service mariadb start && echo "<?php phpinfo(); ?>" > /var/www/html/info.php  && mysql < /data/create_db.sql && /usr/sbin/apache2ctl -DFOREGROUND"
+CMD bash -c "service mariadb start && echo \"<?php phpinfo(); ?>\" > /var/www/html/info.php  && mysql < /data/create_db.sql && /usr/sbin/apache2ctl -DFOREGROUND"
